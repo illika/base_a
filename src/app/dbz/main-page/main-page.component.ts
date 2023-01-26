@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Personaje } from '../interface/dbz.interface';
+import { DbzService } from '../services/dbs.service';
 
 @Component({
   selector: 'app-main-page',
@@ -7,6 +8,8 @@ import { Personaje } from '../interface/dbz.interface';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
+
+  constructor(private dbzService: DbzService) { }
 
   personajes: Personaje[] = [
     {
